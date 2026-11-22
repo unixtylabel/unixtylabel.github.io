@@ -22,7 +22,6 @@
     <a href="#log">Update Log</a>
     <a href="#word">The Word</a>
     <a href="#tap-in">Tap In</a>
-    <a href="#guestbook">Guestbook</a>
   </nav>
 </header>
 
@@ -155,21 +154,6 @@
     </section>
   </div>
 
-  <section class="room guestbook" id="guestbook">
-    <h2>Guestbook</h2>
-    <p class="lede">Leave a word for the house.</p>
-    <div class="letter-panel">
-      <img class="seal cutout" src="assets/decorations/envelope.png" alt="An old envelope sealed with red wax">
-      <form id="guestbook-form">
-      <label for="gb-name">Name</label>
-      <input id="gb-name" name="Name" type="text" required>
-      <label for="gb-message">Message</label>
-      <textarea id="gb-message" name="Message" required></textarea>
-      <button type="submit">Leave a word</button>
-    </form>
-    </div>
-  </section>
-
 </main>
 
 <div class="vista">
@@ -180,17 +164,6 @@
   <img class="bunny" src="assets/decorations/bunny-white-transparent.png" alt="A small bunny, drawn in ink">
   <p>UNIXTY &mdash; an independent house of music, Montreal.</p>
 </footer>
-
-<script>
-document.getElementById('guestbook-form').addEventListener('submit', function (e) {
-  e.preventDefault();
-  var name = document.getElementById('gb-name').value.trim();
-  var message = document.getElementById('gb-message').value.trim();
-  var subject = 'Guestbook — ' + name;
-  var body = message + '\n\n— ' + name;
-  window.location.href = 'mailto:unixtylabel@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-});
-</script>
 
 </body>
 </html>
