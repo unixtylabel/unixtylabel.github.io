@@ -218,11 +218,10 @@ h2::after, .artist-page h1::after {
 .artist img.portrait {
   width: 100%;
   aspect-ratio: 4 / 5;
-  object-fit: contain;
-  filter: sepia(0.45) contrast(1.03) brightness(1.02);
-  margin-bottom: 16px;
+  object-fit: cover;
+    margin-bottom: 16px;
   background: var(--parchment);
-  padding: 10px;
+  padding: 0;
   border: 1px solid var(--parchment-deep);
   outline: 1px solid var(--parchment);
   outline-offset: 4px;
@@ -358,8 +357,7 @@ footer.site .bunny { width: 74px; margin: 0 auto 14px; opacity: 0.85; }
   width: 100%;
   max-width: 520px;
   margin: 0 auto 18px;
-  filter: sepia(0.45) contrast(1.03) brightness(1.02);
-  background: var(--parchment);
+    background: var(--parchment);
   padding: 10px;
   border: 1px solid var(--parchment-deep);
   outline: 1px solid var(--parchment);
@@ -384,8 +382,7 @@ footer.site .bunny { width: 74px; margin: 0 auto 14px; opacity: 0.85; }
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: contain;
-  filter: sepia(0.45) contrast(1.03) brightness(1.02);
-  background: var(--parchment);
+    background: var(--parchment);
   padding: 6px;
   border: 22px solid transparent;
   border-image: url("assets/decorations/frame-photo-white-transparent.png") 420 fill / 22px;
