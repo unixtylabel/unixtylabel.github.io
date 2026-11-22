@@ -41,6 +41,11 @@ body::after {
   z-index: 60;
 }
 
+/* ---------- home page background ---------- */
+body.home {
+  background-image: linear-gradient(rgba(36,26,18,0.6), rgba(36,26,18,0.6)), url("assets/textures/home-bg.png");
+}
+
 a { color: var(--gold); }
 a:hover { color: var(--cream); }
 
