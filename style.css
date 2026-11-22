@@ -30,24 +30,13 @@ body {
   overflow-x: hidden;
 }
 
-/* ---------- ornamental frame around the whole page ---------- */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  border: 46px solid transparent;
-  border-image: url("assets/decorations/ornate-frame-white-transparent.png") 210 fill / 46px;
-  pointer-events: none;
-  z-index: 60;
-}
-
 /* ---------- home page background ---------- */
 body.home {
   background-image: linear-gradient(rgba(36,26,18,0.6), rgba(36,26,18,0.6)), url("assets/textures/home-bg.png");
 }
 
 /* ---------- home page corner ornaments (fixed size, never stretched) ---------- */
-body.home::before {
+body::before {
   content: "";
   position: fixed;
   top: 0;
@@ -58,21 +47,16 @@ body.home::before {
   pointer-events: none;
   z-index: 60;
 }
-body.home::after {
+body::after {
   content: "";
   position: fixed;
   inset: auto 0 0 auto;
   width: 300px;
   height: 300px;
   background: url("assets/decorations/corner-frame-white-transparent.png") top left / contain no-repeat;
-  border: 0;
-  border-image: none;
   transform: rotate(180deg);
   pointer-events: none;
   z-index: 60;
-}
-body.home header.site {
-  padding-top: 18px;
 }
 
 a { color: var(--gold); }
@@ -83,7 +67,7 @@ img { max-width: 100%; display: block; }
 /* ---------- header / nav ---------- */
 header.site {
   text-align: center;
-  padding: 58px 16px 8px;
+  padding: 18px 16px 8px;
 }
 header.site .mark img { height: 36px; width: auto; margin: 0 auto; }
 nav.rooms {
@@ -457,7 +441,6 @@ body.home-usa {
   .photos { grid-template-columns: repeat(2, 1fr); }
   .pair { grid-template-columns: 1fr; }
   body { font-size: 18px; }
-  body::after { border-width: 26px; border-image-width: 26px; }
-  body.home::before, body.home::after { width: 170px; height: 170px; }
+  body::before, body::after { width: 170px; height: 170px; }
   .page { padding: 0 34px 80px; }
 }
