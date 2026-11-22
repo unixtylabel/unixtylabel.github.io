@@ -29,7 +29,7 @@
 <main class="page">
 
   <div class="hero">
-        <h1><img src="assets/logos/unixty-logo-white.png" alt="UNIXTY"></h1>
+    <h1><img src="assets/logos/unixty-logo-white.png" alt="UNIXTY"></h1>
     <p class="sub">An independent house of music &mdash; Montreal.</p>
   </div>
 
@@ -160,7 +160,7 @@
     <p class="lede">Leave a word for the house.</p>
     <div class="letter-panel">
       <img class="seal cutout" src="assets/decorations/envelope.png" alt="An old envelope sealed with red wax">
-      <form action="mailto:unixtylabel@gmail.com" method="post" enctype="text/plain">
+      <form id="guestbook-form">
       <label for="gb-name">Name</label>
       <input id="gb-name" name="Name" type="text" required>
       <label for="gb-message">Message</label>
@@ -180,6 +180,17 @@
   <img class="bunny" src="assets/decorations/bunny-white-transparent.png" alt="A small bunny, drawn in ink">
   <p>UNIXTY &mdash; an independent house of music, Montreal.</p>
 </footer>
+
+<script>
+document.getElementById('guestbook-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var name = document.getElementById('gb-name').value.trim();
+  var message = document.getElementById('gb-message').value.trim();
+  var subject = 'Guestbook — ' + name;
+  var body = message + '\n\n— ' + name;
+  window.location.href = 'mailto:unixtylabel@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+});
+</script>
 
 </body>
 </html>
