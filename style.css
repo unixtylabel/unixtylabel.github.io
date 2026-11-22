@@ -54,7 +54,7 @@ img { max-width: 100%; display: block; }
 /* ---------- header / nav ---------- */
 header.site {
   text-align: center;
-  padding: 18px 16px 8px;
+  padding: 58px 16px 8px;
 }
 header.site .mark img { height: 36px; width: auto; margin: 0 auto; }
 nav.rooms {
