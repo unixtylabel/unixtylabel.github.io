@@ -20,7 +20,7 @@ html { scroll-behavior: smooth; }
 
 body {
   background-color: var(--brown-dark);
-  background-image: url("assets/textures/dark-brown-grain.jpg");
+  background-image: linear-gradient(rgba(36,26,18,0.72), rgba(36,26,18,0.72)), url("assets/textures/manuscript.png");
   background-size: cover;
   background-attachment: fixed;
   color: var(--cream);
@@ -198,8 +198,9 @@ h2::after, .artist-page h1::after {
   filter: grayscale(1);
   margin-bottom: 16px;
   background: var(--parchment);
-  padding: 10px;
-  border: 1px solid var(--parchment-deep);
+  padding: 8px;
+  border: 28px solid transparent;
+  border-image: url("assets/decorations/frame-photo-white-transparent.png") 420 fill / 28px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.35);
 }
 .artist img.logo { width: 150px; margin: 0 auto 10px; }
@@ -334,8 +335,9 @@ footer.site .bunny { width: 74px; margin: 0 auto 14px; opacity: 0.85; }
   margin: 0 auto 18px;
   filter: grayscale(1);
   background: var(--parchment);
-  padding: 10px;
-  border: 1px solid var(--parchment-deep);
+  padding: 8px;
+  border: 28px solid transparent;
+  border-image: url("assets/decorations/frame-photo-white-transparent.png") 420 fill / 28px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 .artist-page img.logo { width: 190px; margin: 0 auto 18px; }
@@ -358,8 +360,9 @@ footer.site .bunny { width: 74px; margin: 0 auto 14px; opacity: 0.85; }
   object-fit: cover;
   filter: grayscale(1);
   background: var(--parchment);
-  padding: 8px;
-  border: 1px solid var(--parchment-deep);
+  padding: 6px;
+  border: 22px solid transparent;
+  border-image: url("assets/decorations/frame-photo-white-transparent.png") 420 fill / 22px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.35);
 }
 
